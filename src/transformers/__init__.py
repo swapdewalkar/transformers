@@ -318,6 +318,7 @@ _import_structure = {
     "models.deberta_v2": ["DebertaV2Config"],
     "models.decision_transformer": ["DecisionTransformerConfig"],
     "models.deformable_detr": ["DeformableDetrConfig"],
+    "models.deepseekv2": ["DeepSeekV2Config"],
     "models.deit": ["DeiTConfig"],
     "models.deprecated": [],
     "models.deprecated.bort": [],
@@ -1741,6 +1742,11 @@ else:
             "DebertaV2ForTokenClassification",
             "DebertaV2Model",
             "DebertaV2PreTrainedModel",
+        ]
+    )
+    _import_structure["models.deepseekv2"].extend(
+        [
+            "DeepSeekV2Model"
         ]
     )
     _import_structure["models.decision_transformer"].extend(
@@ -6283,6 +6289,9 @@ if TYPE_CHECKING:
             DebertaV2ForTokenClassification,
             DebertaV2Model,
             DebertaV2PreTrainedModel,
+        )
+        from .models.deepseekv2 import (
+            DeepSeekV2Model,
         )
         from .models.decision_transformer import (
             DecisionTransformerGPT2Model,

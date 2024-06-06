@@ -160,6 +160,7 @@ else:
                     "DebertaV2TokenizerFast" if is_tokenizers_available() else None,
                 ),
             ),
+            ("deepseekv2", ("DeepSeekV2Tokenizer", "DeepSeekV2TokenizerFast" if is_tokenizers_available() else None)),
             ("distilbert", ("DistilBertTokenizer", "DistilBertTokenizerFast" if is_tokenizers_available() else None)),
             (
                 "dpr",
